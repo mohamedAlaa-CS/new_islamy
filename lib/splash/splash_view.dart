@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:islamy/core/assets/app_assets.dart';
-import 'package:islamy/modules/layout/layout_view.dart';
+import 'package:islamy/modules/onboarding/onboarding_view.dart';
 
 class SplashView extends StatefulWidget {
   static const String routeName = 'SplashView';
@@ -22,7 +22,7 @@ class _SplashViewState extends State<SplashView> {
       () {
         // nav to layout view
 
-        Navigator.pushReplacementNamed(context, LayoutView.routeName);
+        Navigator.pushReplacementNamed(context, OnboardingView.routeName);
       },
     );
   }

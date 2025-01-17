@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islamy/core/theme/app_theme.dart';
 import 'package:islamy/modules/layout/layout_view.dart';
+import 'package:islamy/modules/onboarding/onboarding_view.dart';
 import 'package:islamy/splash/splash_view.dart';
 
 void main() {
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
       routes: {
         SplashView.routeName: (context) => const SplashView(),
         LayoutView.routeName: (context) => const LayoutView(),
+        OnboardingView.routeName: (_) => const OnboardingView(),
       },
     );
   }
