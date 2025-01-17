@@ -21,6 +21,7 @@ class _SplashViewState extends State<SplashView> {
       const Duration(seconds: 2),
       () {
         // nav to layout view
+
         Navigator.pushReplacementNamed(context, LayoutView.routeName);
       },
     );
