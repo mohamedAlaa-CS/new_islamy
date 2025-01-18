@@ -18,4 +18,5 @@ abstract class AppAssets {
   static const String radioBg = 'assets/images/radio_bg.png';
   static const String timeBg = 'assets/images/time_bg.png';
   static const String recentImage = "assets/images/recent_image.png";
+  static const String suraNumberBg = "assets/images/sura_number_bg.png";
 }

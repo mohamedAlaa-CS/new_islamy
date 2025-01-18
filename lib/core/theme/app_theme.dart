@@ -3,6 +3,7 @@ import 'package:islamy/core/theme/app_color.dart';
 
 abstract class AppTheme {
   static ThemeData lightTheme = ThemeData(
+      fontFamily: "jana",
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
         type: BottomNavigationBarType.fixed,
         backgroundColor: AppColor.primaryColor,
