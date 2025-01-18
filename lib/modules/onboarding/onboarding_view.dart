@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:islamy/core/assets/app_assets.dart';
 import 'package:islamy/core/theme/app_color.dart';
 import 'package:islamy/models/onboarding_model.dart';
+import 'package:islamy/modules/layout/layout_view.dart';
 import 'package:islamy/modules/onboarding/widgets/dots_indicators.dart';
 import 'package:islamy/modules/onboarding/widgets/pageview_item_widget.dart';
 
@@ -85,6 +86,13 @@ class _OnboardingViewState extends State<OnboardingView> {
                   ),
                   TextButton(
                     onPressed: () {
+                      //---> nav to layout view
+                      if (currentIndex ==
+                          OnBoardingModel.onBoardingList.length - 1) {
+                        Navigator.pushReplacementNamed(
+                            context, LayoutView.routeName);
+                      }
+                      //----> nav to next page
                       pageController.nextPage(
                         duration: const Duration(milliseconds: 300),
                         curve: Curves.fastLinearToSlowEaseIn,
