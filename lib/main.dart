@@ -1,3 +1,4 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:islamy/core/theme/app_theme.dart';
 import 'package:islamy/modules/layout/layout_view.dart';
@@ -5,7 +6,11 @@ import 'package:islamy/modules/onboarding/onboarding_view.dart';
 import 'package:islamy/splash/splash_view.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(DevicePreview(
+      enabled: true,
+      builder: (context) {
+        return const MyApp();
+      }));
 }
 
 class MyApp extends StatelessWidget {
@@ -14,6 +19,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      useInheritedMediaQuery: true,
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
       title: 'Flutter Demo',
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
