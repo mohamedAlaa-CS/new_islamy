@@ -24,6 +24,30 @@ abstract class AppTheme {
               fontWeight: FontWeight.w700,
               color: AppColor.primaryColor),
         ),
-      ));
+      ),
+      inputDecorationTheme: InputDecorationTheme(
+          fillColor: AppColor.secondColor.withOpacity(.7),
+          filled: true,
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+            borderSide: const BorderSide(
+              color: AppColor.primaryColor,
+              width: 1.5,
+            ),
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+            borderSide: const BorderSide(
+              color: AppColor.primaryColor,
+              width: 1.5,
+            ),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+            borderSide: const BorderSide(
+              color: AppColor.primaryColor,
+              width: 1.5,
+            ),
+          )));
   static ThemeData darkTheme = ThemeData();
 }

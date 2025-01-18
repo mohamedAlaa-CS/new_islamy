@@ -20,7 +20,7 @@ class LayoutView extends StatefulWidget {
 class _LayoutViewState extends State<LayoutView> {
   int selectedIndex = 0;
   List<Widget> screens = [
-    const QuranView(),
+    QuranView(),
     const HadithView(),
     const SebhaView(),
     const RadioView(),
