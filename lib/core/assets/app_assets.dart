@@ -7,4 +7,9 @@ abstract class AppAssets {
   static const String onBoarding_3 = 'assets/images/onboarding_3.png';
   static const String onBoarding_4 = 'assets/images/onboarding_4.png';
   static const String onBoarding_5 = 'assets/images/onboarding_5.png';
+  static const String quranIcon = 'assets/images/quran_icon.png';
+  static const String hadithIcon = 'assets/images/hadeth_icon.png';
+  static const String sebhaIcon = 'assets/images/sebha_icon.png';
+  static const String radioIcon = 'assets/images/radio_icon.png';
+  static const String timeIcon = 'assets/images/time_icon.png';
 }
