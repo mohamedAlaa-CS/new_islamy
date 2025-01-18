@@ -30,6 +30,7 @@ class _LayoutViewState extends State<LayoutView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.transparent,
       body: screens[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         onTap: (index) {
