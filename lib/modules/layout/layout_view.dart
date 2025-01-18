@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:islamy/core/assets/app_assets.dart';
 import 'package:islamy/modules/layout/widgets/custom_bottom_nav.dart';
+import 'package:islamy/modules/quran/quran_view.dart';
+import 'package:islamy/modules/radio/radio_view.dart';
+import 'package:islamy/modules/sebha/sebha_view.dart';
+import 'package:islamy/modules/time/time_view.dart';
+
+import '../hadith/hadith_view.dart';
 
 class LayoutView extends StatefulWidget {
   static const String routeName = '/layout';
@@ -13,10 +19,18 @@ class LayoutView extends StatefulWidget {
 
 class _LayoutViewState extends State<LayoutView> {
   int selectedIndex = 0;
+  List<Widget> screens = [
+    const QuranView(),
+    const HadithView(),
+    const SebhaView(),
+    const RadioView(),
+    const TimeView(),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: screens[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         onTap: (index) {
           setState(() {

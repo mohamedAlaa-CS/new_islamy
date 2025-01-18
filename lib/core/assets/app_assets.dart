@@ -12,4 +12,9 @@ abstract class AppAssets {
   static const String sebhaIcon = 'assets/images/sebha_icon.png';
   static const String radioIcon = 'assets/images/radio_icon.png';
   static const String timeIcon = 'assets/images/time_icon.png';
+  static const String quranBg = 'assets/images/quran_bg.png';
+  static const String hadithBg = 'assets/images/hadith_bg.png';
+  static const String sebhaBg = 'assets/images/sebha_bg.png';
+  static const String radioBg = 'assets/images/radio_bg.png';
+  static const String timeBg = 'assets/images/time_bg.png';
 }
