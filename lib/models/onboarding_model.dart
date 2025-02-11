@@ -1,4 +1,4 @@
-import 'package:islamy/core/assets/app_assets.dart';
+import '/core/assets/app_assets.dart';
 
 class OnBoardingModel {
   final String image;

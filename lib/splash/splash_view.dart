@@ -1,8 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:islamy/core/assets/app_assets.dart';
-import 'package:islamy/modules/onboarding/onboarding_view.dart';
+
+import '/core/assets/app_assets.dart';
+import '/modules/onboarding/onboarding_view.dart';
 
 class SplashView extends StatefulWidget {
   static const String routeName = 'SplashView';
