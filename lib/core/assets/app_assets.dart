@@ -19,4 +19,7 @@ abstract class AppAssets {
   static const String timeBg = 'assets/images/time_bg.png';
   static const String recentImage = "assets/images/recent_image.png";
   static const String suraNumberBg = "assets/images/sura_number_bg.png";
+  static const String leftCorner = "assets/images/left_corner.png";
+  static const String rightCorner = "assets/images/right_corner.png";
+  static const String bottomImage = "assets/images/bottom_image.png";
 }

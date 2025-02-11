@@ -3,6 +3,7 @@ import 'package:islamy/core/assets/app_assets.dart';
 import 'package:islamy/core/theme/app_color.dart';
 import 'package:islamy/models/recent_model.dart';
 import 'package:islamy/models/sura_model.dart';
+import 'package:islamy/modules/quran/quran_details.dart';
 import 'package:islamy/modules/quran/widgets/most_recent_item_widget.dart';
 import 'package:islamy/modules/quran/widgets/sura_item_widget.dart';
 
@@ -305,6 +306,99 @@ class QuranView extends StatelessWidget {
         suraNameAr: 'الإنشقاق',
         suraNameEn: 'Al-Inshiqaq',
         verseCount: 25),
+    SuraModel(
+        id: '85', suraNameAr: 'البروج', suraNameEn: 'Al-Buruj', verseCount: 22),
+    SuraModel(
+        id: '86', suraNameAr: 'الطارق', suraNameEn: 'At-Tariq', verseCount: 17),
+    SuraModel(
+        id: '87', suraNameAr: 'الأعلى', suraNameEn: 'Al-A\'la', verseCount: 19),
+    SuraModel(
+        id: '88',
+        suraNameAr: 'الغاشية',
+        suraNameEn: 'Al-Ghashiyah',
+        verseCount: 26),
+    SuraModel(
+        id: '89', suraNameAr: 'الفجر', suraNameEn: 'Al-Fajr', verseCount: 30),
+    SuraModel(
+        id: '90', suraNameAr: 'البلد', suraNameEn: 'Al-Balad', verseCount: 20),
+    SuraModel(
+        id: '91', suraNameAr: 'الشمس', suraNameEn: 'Ash-Shams', verseCount: 15),
+    SuraModel(
+        id: '92', suraNameAr: 'الليل', suraNameEn: 'Al-Lail', verseCount: 21),
+    SuraModel(
+        id: '93', suraNameAr: 'الضحى', suraNameEn: 'Ad-Duhaa', verseCount: 11),
+    SuraModel(
+        id: '94', suraNameAr: 'الشرح', suraNameEn: 'Ash-Sharh', verseCount: 8),
+    SuraModel(
+        id: '95', suraNameAr: 'التين', suraNameEn: 'At-Tin', verseCount: 8),
+    SuraModel(
+        id: '96', suraNameAr: 'العلق', suraNameEn: 'Al-Alaq', verseCount: 19),
+    SuraModel(
+        id: '97', suraNameAr: 'القدر', suraNameEn: 'Al-Qadr', verseCount: 5),
+    SuraModel(
+        id: '98',
+        suraNameAr: 'البينة',
+        suraNameEn: 'Al-Bayyina',
+        verseCount: 8),
+    SuraModel(
+        id: '99',
+        suraNameAr: 'الزلزلة',
+        suraNameEn: 'Az-Zalzala',
+        verseCount: 8),
+    SuraModel(
+        id: '100',
+        suraNameAr: 'العاديات',
+        suraNameEn: 'Al-Adiyat',
+        verseCount: 11),
+    SuraModel(
+        id: '101',
+        suraNameAr: 'القارعة',
+        suraNameEn: 'Al-Qaria',
+        verseCount: 11),
+    SuraModel(
+        id: '102',
+        suraNameAr: 'التكاثر',
+        suraNameEn: 'At-Takathur',
+        verseCount: 8),
+    SuraModel(
+        id: '103', suraNameAr: 'العصر', suraNameEn: 'Al-Asr', verseCount: 3),
+    SuraModel(
+        id: '104',
+        suraNameAr: 'الهمزة',
+        suraNameEn: 'Al-Humaza',
+        verseCount: 9),
+    SuraModel(
+        id: '105', suraNameAr: 'الفيل', suraNameEn: 'Al-Fil', verseCount: 5),
+    SuraModel(
+        id: '106', suraNameAr: 'قريش', suraNameEn: 'Quraysh', verseCount: 4),
+    SuraModel(
+        id: '107',
+        suraNameAr: 'الماعون',
+        suraNameEn: 'Al-Ma\'un',
+        verseCount: 7),
+    SuraModel(
+        id: '108',
+        suraNameAr: 'الكوثر',
+        suraNameEn: 'Al-Kawthar',
+        verseCount: 3),
+    SuraModel(
+        id: '109',
+        suraNameAr: 'الكافرون',
+        suraNameEn: 'Al-Kafiroon',
+        verseCount: 6),
+    SuraModel(
+        id: '110', suraNameAr: 'النصر', suraNameEn: 'An-Nasr', verseCount: 3),
+    SuraModel(
+        id: '111', suraNameAr: 'المسد', suraNameEn: 'Al-Masad', verseCount: 5),
+    SuraModel(
+        id: '112',
+        suraNameAr: 'الإخلاص',
+        suraNameEn: 'Al-Ikhlas',
+        verseCount: 4),
+    SuraModel(
+        id: '113', suraNameAr: 'الفلق', suraNameEn: 'Al-Falaq', verseCount: 5),
+    SuraModel(
+        id: '114', suraNameAr: 'الناس', suraNameEn: 'An-Nas', verseCount: 6),
   ];
 
   @override
@@ -385,8 +479,16 @@ class QuranView extends StatelessWidget {
                 ListView.separated(
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
-                  itemBuilder: (context, index) => SuraItemWidget(
-                    suraModel: suraList[index],
+                  itemBuilder: (context, index) => InkWell(
+                    onTap: () {
+                      Navigator.of(context).pushNamed(
+                        QuranDetails.routeName,
+                        arguments: suraList[index],
+                      );
+                    },
+                    child: SuraItemWidget(
+                      suraModel: suraList[index],
+                    ),
                   ),
                   separatorBuilder: (context, index) => const Divider(
                     color: AppColor.white,
